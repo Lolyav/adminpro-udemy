@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
 
 usuario: Usuario;
 imagenSubir: File;
-imagenTemp: string;
+imagenTemp: any;
 
   constructor(
     public _usuarioService: UsuarioService
@@ -42,16 +42,16 @@ imagenTemp: string;
      return;
 
     }
- 
+
    if (archivo.type.indexOf('image') < 0 ) {
       swal('Solo imagenes', 'El archivo seleccionado No es una imagen', 'error');
      this.imagenSubir = null;
       return;
     }
- 
+
     this.imagenSubir = archivo;
 
-    let reader = new FileReader();
+    const reader = new FileReader();
     let urlImagenTemp = reader.readAsDataURL( archivo );
     reader.onloadend = () => this.imagenTemp = reader.result;
 
