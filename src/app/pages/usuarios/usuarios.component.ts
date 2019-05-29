@@ -80,7 +80,7 @@ export class UsuariosComponent implements OnInit {
   borrarUsuario( usuario: Usuario ) {
 
    if ( usuario._id === this._usuariosService.usuario._id ) {
-     swal('No puede borrar Usuario','No se puede borrar a si mismo','error');
+     swal('No puede borrar Usuario', 'No se puede borrar a si mismo', 'error');
      return;
    }
     swal({

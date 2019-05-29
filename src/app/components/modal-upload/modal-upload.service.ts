@@ -29,5 +29,5 @@ export class ModalUploadService {
      this.tipo = tipo;
    }
 
-   
+
 }
