@@ -60,8 +60,8 @@ export class LoginComponent implements OnInit {
       let token = googleUser.getAuthResponse().id_token;
 
       this._usuarioService.loginGoogle( token )
-        .subscribe(() => window.location.href = '#/dshboard' );
-     // this.router.navigate(['/dshboard'])
+        .subscribe(() => window.location.href = '#/dashboard' );
+     // this.router.navigate(['/dashboard'])
    });
 
   }
@@ -74,6 +74,6 @@ export class LoginComponent implements OnInit {
     let usuario = new Usuario( null, forma.value.email, forma.value.password );
 
     this._usuarioService.login( usuario, forma.value.recuerdame)
-      .subscribe(correcto => this.router.navigate(['/dshboard']));
+      .subscribe(correcto => this.router.navigate(['/dashboard']));
    }
 }

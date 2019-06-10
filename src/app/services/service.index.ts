@@ -1,3 +1,4 @@
+
 export { HospitalService } from './hospital/hospital.service';
 
 export { MedicoService } from './medico/medico.service';
@@ -19,3 +20,4 @@ export { SidebarService } from './shared/sidebar.service';
 
 export {UsuarioService} from './usuario/usuario.service';
 
+export { VerificaTokenGuard } from './guards/verifica-token.guard';
